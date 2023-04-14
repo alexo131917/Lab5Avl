@@ -17,7 +17,7 @@ public class AVL {
         do{
             try{
                 opcion= Integer.parseInt(JOptionPane.showInputDialog(null, 
-                                "1. Agregar un Nodo\n "
+                                  "1. Agregar un Nodo\n "
                                 + "2. Salir\n"
                                 + "Elige una opcion... ","Arboles Binarios"
                         , JOptionPane.QUESTION_MESSAGE)) ;
@@ -37,7 +37,7 @@ public class AVL {
                         break;
                     default:
                         JOptionPane.showInputDialog(null, "Opcion Incorrecta",
-                                "Fin",JOptionPane.QUESTION_MESSAGE);
+                                "Cuidado",JOptionPane.QUESTION_MESSAGE);
                 }
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
