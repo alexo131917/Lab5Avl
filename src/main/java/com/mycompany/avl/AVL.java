@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @author alexo
  */
 public class AVL {
-//quiero ir a dormir 
+
     public static void main(String[] args) {
         int opcion =0, elemento;
         String nombre;
@@ -29,8 +29,12 @@ public class AVL {
                         nombre = JOptionPane.showInputDialog(null,
                                 "Ingresa el nombre del Nodo...","Agregado Nodo"
                                 ,JOptionPane.QUESTION_MESSAGE);
+                        arbolito.agregarNodo(elemento, nombre);
                         break;
-                //Hace mucho frio y no se que hacer
+                    case 2:
+                        JOptionPane.showInputDialog(null, "Aplicacion finalizada",
+                                "Fin",JOptionPane.QUESTION_MESSAGE);
+                        break;
                 }
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
