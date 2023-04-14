@@ -35,6 +35,9 @@ public class AVL {
                         JOptionPane.showInputDialog(null, "Aplicacion finalizada",
                                 "Fin",JOptionPane.QUESTION_MESSAGE);
                         break;
+                    default:
+                        JOptionPane.showInputDialog(null, "Opcion Incorrecta",
+                                "Fin",JOptionPane.QUESTION_MESSAGE);
                 }
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
