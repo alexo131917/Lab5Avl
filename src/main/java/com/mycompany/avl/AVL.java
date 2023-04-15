@@ -5,7 +5,16 @@
 package com.mycompany.avl;
 import javax.swing.JOptionPane;
 /**
- *
+ * Alumno: Pablo Alexander León Zapeta
+ * Carnet: 2294-21-6784
+ * 
+ * Universidad Mariano Gálvez de Guatemala
+ * Centro Universitario La Antigua Guatemala
+ * Facultad de Ingeniería
+ * Programación III                   Laboratorio 5       Árboles AVL
+ * Ing. Cristian Ramos
+ * 
+ *      
  * @author alexo
  */
 public class AVL {
