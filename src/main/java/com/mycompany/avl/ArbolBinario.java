@@ -39,4 +39,17 @@ public class ArbolBinario {
             }
         }
     }
+    // Metodo para saber cuando el arbol esta vacio
+    public boolean estaVacio (){
+    return raiz==null; // Es pregunta si es igual a null regresa True si no un false
+    }
+    // Metodo para recorrer el Arbol InOrden
+    public void inOrden(NodoArbol r){
+        if (r! = null){      //Si r es diferente null entonces si hace el recorrido
+            inOrden(r.hijoIzquierdo); // primer paso es recorrer sub arbol izquierdo
+            System.out.println(r.dato);
+            inOrden(r.hijoDerecho);
+    }
+    
+    }
 }
