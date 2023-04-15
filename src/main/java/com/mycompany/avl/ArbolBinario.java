@@ -59,4 +59,12 @@ public class ArbolBinario {
             preOrden(r.hijoDerecho);
         }    
     }
+    // Metodo para recorrer el Arbol preOrden
+    public void postOrden(NodoArbol r){
+        if (r!= null){      //Si r es diferente null entonces si hace el recorrido
+            postOrden(r.hijoIzquierdo); // primer paso es recorrer el sub arbol izquierdo
+            postOrden(r.hijoDerecho); // segundo recorre el sub arbol derecho
+            System.out.println(r.dato); // tercer paso recorre la raiz
+        }   
+    }
 }
