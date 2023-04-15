@@ -20,8 +20,9 @@ public class AVL {
                                   "1. Agregar un Nodo\n "
                                 + "2. Recorrer el árbol InOrden\n"
                                 + "3. Recorrer el árbol PreOrden\n"
-                                + "4. Recorrer el árbol PreOrden\n"
-                                + "5. Salir\n"
+                                + "4. Recorrer el árbol PostOrden\n"
+                                + "5. Buscar un nodo en el árbol\n"
+                                + "6. Salir\n"
                                 + "Elige una opcion... ","Arboles Binarios"
                         , JOptionPane.QUESTION_MESSAGE)) ;
                 switch (opcion){
@@ -59,6 +60,23 @@ public class AVL {
                         }
                         break;
                     case 5:
+                        if (!arbolito.estaVacio()){
+                           elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                "Ingresa el numero del Nodo buscado..", "Buscando Nodo"
+                                ,JOptionPane.QUESTION_MESSAGE));
+                           
+                           if(arbolito.buscarNodo(elemento)==null){
+                               JOptionPane.showInputDialog(null, "El nodo no se encuentra en el árbol",
+                                "!Nodo no encontrado¡",JOptionPane.QUESTION_MESSAGE);
+                           }else{
+                               System.out.println("Nodo encontrado, sus datos son:" + arbolito.buscarNodo(elemento));
+                           }
+                        }else{
+                            JOptionPane.showInputDialog(null, "El árbol esta vácio",
+                                "!Vacio¡",JOptionPane.QUESTION_MESSAGE);
+                        }
+                        break;
+                    case 6:
                         JOptionPane.showInputDialog(null, "Aplicacion finalizada",
                                 "Fin",JOptionPane.QUESTION_MESSAGE);
                         break;
@@ -69,6 +87,6 @@ public class AVL {
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
             }
-        }while(opcion!=5);
+        }while(opcion!=6);
     }
 }

@@ -67,4 +67,19 @@ public class ArbolBinario {
             System.out.println(r.dato); // tercer paso recorre la raiz
         }   
     }
+    //Metodo para buscar un nodo en el arbol
+    public NodoArbol buscarNodo (int d){
+        NodoArbol aux=raiz;
+        while(aux.dato!=d){
+            if(d<aux.dato){
+                aux=aux.hijoIzquierdo;
+            }else{
+                aux=aux.hijoDerecho;
+            }
+            if(aux==null){
+                return null;
+            }
+        }
+        return aux;
+    }
 }
