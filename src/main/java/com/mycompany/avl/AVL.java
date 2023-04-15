@@ -19,7 +19,8 @@ public class AVL {
                 opcion= Integer.parseInt(JOptionPane.showInputDialog(null, 
                                   "1. Agregar un Nodo\n "
                                 + "2. Recorrer el árbol InOrden\n"
-                                + "3. Salir\n"
+                                + "3. Recorrer el árbol PreOrden\n"
+                                + "4. Salir\n"
                                 + "Elige una opcion... ","Arboles Binarios"
                         , JOptionPane.QUESTION_MESSAGE)) ;
                 switch (opcion){
@@ -41,6 +42,14 @@ public class AVL {
                         }
                         break;
                     case 3:
+                        if (!arbolito.estaVacio()){
+                           arbolito.preOrden(arbolito.raiz);
+                        }else{
+                            JOptionPane.showInputDialog(null, "El árbol esta vácio",
+                                "!Vacio¡",JOptionPane.QUESTION_MESSAGE);
+                        }
+                        break;
+                    case 4:
                         JOptionPane.showInputDialog(null, "Aplicacion finalizada",
                                 "Fin",JOptionPane.QUESTION_MESSAGE);
                         break;
@@ -51,6 +60,6 @@ public class AVL {
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
             }
-        }while(opcion!=3);
+        }while(opcion!=4);
     }
 }
