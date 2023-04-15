@@ -22,7 +22,8 @@ public class AVL {
                                 + "3. Recorrer el árbol PreOrden\n"
                                 + "4. Recorrer el árbol PostOrden\n"
                                 + "5. Buscar un nodo en el árbol\n"
-                                + "6. Salir\n"
+                                + "6. Eliminar un nodo en el árbol\n"
+                                + "7. Salir\n"
                                 + "Elige una opcion... ","Arboles Binarios"
                         , JOptionPane.QUESTION_MESSAGE)) ;
                 switch (opcion){
@@ -37,6 +38,7 @@ public class AVL {
                         break;
                     case 2:
                         if (!arbolito.estaVacio()){
+                            System.out.println();
                            arbolito.inOrden(arbolito.raiz);
                         }else{
                             JOptionPane.showInputDialog(null, "El árbol esta vácio",
@@ -45,6 +47,7 @@ public class AVL {
                         break;
                     case 3:
                         if (!arbolito.estaVacio()){
+                            System.out.println();
                            arbolito.preOrden(arbolito.raiz);
                         }else{
                             JOptionPane.showInputDialog(null, "El árbol esta vácio",
@@ -53,6 +56,7 @@ public class AVL {
                         break;
                     case 4:
                         if (!arbolito.estaVacio()){
+                            System.out.println();
                            arbolito.postOrden(arbolito.raiz);
                         }else{
                             JOptionPane.showInputDialog(null, "El árbol esta vácio",
@@ -77,6 +81,24 @@ public class AVL {
                         }
                         break;
                     case 6:
+                        if (!arbolito.estaVacio()){
+                           elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                "Ingresa el numero del Nodo eliminar..", "Eliminando Nodo"
+                                ,JOptionPane.QUESTION_MESSAGE));
+                           
+                           if(arbolito.eliminar(elemento)==false){
+                               JOptionPane.showInputDialog(null, "El nodo no se encuentra en el árbol",
+                                "!Nodo no encontrado¡",JOptionPane.QUESTION_MESSAGE);
+                           }else{
+                               JOptionPane.showInputDialog(null, "El nodo a sido eliminado del árbol",
+                                "!Nodo eliminado¡",JOptionPane.QUESTION_MESSAGE);
+                           }
+                        }else{
+                            JOptionPane.showInputDialog(null, "El árbol esta vácio",
+                                "!Vacio¡",JOptionPane.QUESTION_MESSAGE);
+                        }
+                        break;
+                    case 7:
                         JOptionPane.showInputDialog(null, "Aplicacion finalizada",
                                 "Fin",JOptionPane.QUESTION_MESSAGE);
                         break;
@@ -87,6 +109,6 @@ public class AVL {
              }catch(NumberFormatException n){
             JOptionPane.showMessageDialog(null,"error" + n.getMessage());
             }
-        }while(opcion!=6);
+        }while(opcion!=7);
     }
 }
